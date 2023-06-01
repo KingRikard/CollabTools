@@ -21,5 +21,4 @@ from website import views
 urlpatterns = [
     path('', include('website.urls')),
     path('admin/', admin.site.urls),
-    path("simple_function", views.simple_function),
 ]

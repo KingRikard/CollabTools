@@ -1,20 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import requests
-import xml.etree.ElementTree as ET
-#from django.http import HttpResponse
-import urllib3
 from .cucm import *
 from .webex import *
-# from django.views import generic
 
-number = 0
-username = ''
 
 def home(request):
     context = {
         "title": "Trigger python logic",
-        "number": number
+        "number": 0
     }
     return render(request, "tool.html", context)
 
@@ -33,14 +26,8 @@ def user(request):
         print(cucmUser)
     else:
         print("Not a POST")
-#    userLookup({"username": username})
     return render(request, 'user.html', {'cucmUser': cucmUser, 'devices': devices})
 
-
-def simple_function(request):
-    print("\nThis is a simple function\n")
-
-    return HttpResponse("""<html><script>window.location.replace('/');</script></html>""")
 
 def webex(request):
     print("\nThis is the Webex lookup\n")

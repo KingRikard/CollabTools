@@ -63,7 +63,6 @@ def insertNewWebexUser(insertWebexUser):
     # Basic Variables setup - taken from .env file
     apiUrl = os.environ['WEBEXAPIURLINSERTPEOPLE']
     access_token = os.environ['ACCESSTOKEN']
-    orgID = os.environ['ORGID']
 
     newUserEmail = insertWebexUser.get('userEmail')
     newUserExtension = insertWebexUser['extension']
