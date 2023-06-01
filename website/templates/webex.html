@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+     {% block title %}
+        This is the WEBEX Page
+     {% endblock title %}
+
+     {% block content %}
+        <hr>
+<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Field</th>
+				<th>Data</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+            <tr>
+				<td>UserID: </td>
+				<td>{{ webexUser.userEmail }}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>First Name</td>
+				<td>{{ webexUser.firstName }}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td>{{ webexUser.lastName }}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Extension</td>
+				<td>{{ webexUser.extension }}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td> </td>
+				<td> </td>
+				<td> </td>
+			</tr>
+			<tr>
+				<td>Last Modified</td>
+				<td>{{ webexUser.lastModified }}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Last Activity</td>
+				<td>{{ webexUser.lastActivity }}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Avatar</td>
+				<td><img src="{{ webexUser.avatar }}" alt="{{ webexUser.displayName }}" width="200"</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<br>
+        <hr>
+     {% endblock content %}

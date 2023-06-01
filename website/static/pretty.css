@@ -1,0 +1,136 @@
+/*
+    id=footer = #footer {} (hash tag)
+    class=footer = .footer {} (dot before tag)
+
+*/
+
+html,
+body {
+	height: 100%;
+	width: 750px;
+	margin: auto;
+	text-align: center;
+	background-color: whitesmoke;
+	font-family: sans-serif;
+	font-weight: 100;
+	}
+
+.form {
+    position: absolute;
+    top: 30%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3)
+    background-color: lightgray;
+    border-radius: 10px;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding:20px;
+  width: 750px;
+  background: #bcd4e6;
+  text-align: center;
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+}
+.page-container {
+    background: whitesmoke;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  align: center;
+}
+
+th  {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+td  {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: #bcd4e6;}
+
+
+#deviceList {
+    text-align: right;
+    text-weight: 400;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  padding: 20px;
+  width: 750px;
+  background: #bcd4e6;
+  text-align: left;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  background-color: #bcd4e6;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #bcd4e6;
+}
+li {
+  display: inline;
+  float: left;
+  border-right: 1px solid #bbb;
+}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+  color: whitesmoke;
+}
+
+#requiredText {
+    color: red;
+    vertical-align: super;
+    letter-spacing: -1px;
+    font-size: 15px;
+}

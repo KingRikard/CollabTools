@@ -1,0 +1,12 @@
+
+# --- Have pip create the requirements.txt file for you automatically
+pip -m pip freeze > requirements.txt
+
+
+# --- Start server
+python manage.py runserver
+
+CSRF tokens
+https://www.stackhawk.com/blog/django-csrf-protection-guide/#:~:text=The%20CSRF%20token%20is%20like,present%20in%20all%20outgoing%20requests.
+
+

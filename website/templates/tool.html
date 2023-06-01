@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+     {% block title %}
+        This is the HOME Page
+     {% endblock title %}
+
+     {% block content %}
+<p>
+<h1>CUCM Tools</h1>
+<h4>CUCM username lookup:</h4>
+            <form action="/user" method="post">
+                {% csrf_token %}
+                <input id="username" type="text" name="username">
+                <button type="submit" value="OK">Click It</button>
+            </form>
+<p><br></p>
+<p>
+<h1>Webex Tools</h1>
+           <h4>Enter Webex email address:</h4>
+            <form action="/webex" method="post">
+                {% csrf_token %}
+                <input id="email" type="text" name="email">
+                <button type="submit" value="OK">Click It</button>
+            </form>
+</p>
+<p><br></p>
+     {% endblock content %}

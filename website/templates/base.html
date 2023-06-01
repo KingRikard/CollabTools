@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'pretty.css' %}">
+    <title>
+     {% block title %}
+        Title of the page
+     {% endblock title %}
+    </title>
+</head>
+<body>
+<header>
+    <div class="header">
+        <ul>
+            <li><a class="nav-link" href="{% url 'index' %}">START</a></li>
+            <li><a class="nav-link" href="{% url 'tool' %}">TOOLS</a></li>
+            <li><a class="nav-link" href="{% url 'about' %}">ABOUT</a></li>
+
+        </ul>
+    </div>
+</header>
+    <div class="page-container">
+     {% block content %}
+        Content of the page
+     {% endblock content %}
+    </div>
+
+      {% block footer %}
+<footer class="footer">
+        <ul>
+            <li><a class="nav-link" href="{% url 'index' %}">START</a></li>
+            <li><a class="nav-link" href="{% url 'tool' %}">TOOLS</a></li>
+            <li><a class="nav-link" href="{% url 'about' %}">ABOUT</a></li>
+
+        </ul>
+</footer>
+    {% endblock footer %}
+
+</body>
+</html>

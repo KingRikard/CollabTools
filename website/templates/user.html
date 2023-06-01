@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+     {% block title %}
+        This is the USER Page
+     {% endblock title %}
+
+     {% block content %}
+        <hr>
+<div class="container">
+	<table>
+			<tr>
+				<th>Field</th>
+				<th>Data</th>
+				<th>Action</th>
+			</tr>
+            <tr>
+				<th>UserID: </th>
+				<td>{{ cucmUser.userID }}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>First Name: </th>
+				<td>{{ cucmUser.firstName }}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Last Name: </th>
+				<td>{{ cucmUser.lastName }}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Extension: </th>
+				<td>{{ cucmUser.extension }}</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<th id="deviceList">Devices: </th>
+				<td> </td>
+				<td> </td>
+			</tr>
+			{% for device in devices %}
+			<tr>
+				<th id="deviceList">-</th>
+				<td>{{ device }}</td>
+				<td></td>
+			</tr>
+			{% endfor %}
+	</table>
+</div>
+<br>
+      {% endblock content %}
